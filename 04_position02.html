@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box 겹쳐놓기 위로올라가는 버튼</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="./jquery-1.12.4.js"></script>
+    <style>
+        body {
+            background: #ddd;
+            height: 300vh;
+        }
+
+        .to_top {
+            position: fixed;
+            bottom: 100px;
+            right: 100px;
+
+            border: none;
+            background: transparent;
+        }
+
+        .to_top i {
+            padding: 16px;
+            background: #333;
+            color: #fff;
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <section>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore deleniti enim architecto necessitatibus id?
+        Tempore ut sunt totam ullam quibusdam nostrum iusto minima perspiciatis, libero id ex corporis vel neque.
+    </section>
+
+    <button class="to_top">
+        <i class="xi-arrow-top"></i>
+    </button>
+
+    <script>
+        $('.to_top').on('click', function () {
+            $('html,boby').animate({ scrollTop: 0 }, 1000)
+        })
+    </script>
+
+</body>
+
+</html>
